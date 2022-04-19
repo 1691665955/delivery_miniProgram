@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-tabs": "/components/LinUI/tabs/index",
+    "l-tabpanel": "/components/LinUI/tabpanel/index"
+  },
+  "navigationStyle": "custom",
+  "disableScroll": true
+}

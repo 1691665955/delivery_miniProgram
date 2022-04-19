@@ -1,0 +1,54 @@
+<view class="location" style="margin-top: calc({{safeAreaTop}}px + 10rpx);">
+  <image src="/images/home_location.png"></image>
+  <view>湖北大学</view>
+</view>
+<view class="search">
+  <image src="/images/home_search.png"></image>
+  <input placeholder="请输入关键字搜索" />
+</view>
+<view class="remind">附近有20位跑手，预计8分钟接单</view>
+<l-tabs l-class-header="swipeable-header" l-class-inactive="swipeable-class-inactive" l-class-line="line-class" l-class-active="swipeable-class-active" active-key="one" swipeable="{{true}}" has-line="{{true}}" animated-for-line="{{true}}" content-height="{{contentHeight}}">
+  <l-tabpanel tab="下单" key="one" slot="one">
+    <scroll-view class="tab-content" scroll-y="true">
+      <view class="place-item" wx:for="{{orderPlacingList}}" wx:key="id">
+        <view wx:if="{{item.type == 1}}" class="place-item-type-1">取</view>
+        <view wx:else class="place-item-type-2">买</view>
+        <view class="place-item-content">
+          <view class="place-item-title">{{item.title}}</view>
+          <view class="place-item-status">
+            <view class="place-item-time">{{item.publishTime}}</view>
+            <view class="place-item-status" style="color: {{item.deliveryInfo == null ? '#8a8a8a' : item.type == 1 ? '#4797F8' : '#F297F8'}};">{{item.deliveryInfo == null ? "待接单" : "已接单"}}</view>
+          </view>
+        </view>
+      </view>
+      <view style="height: 40rpx;"></view>
+    </scroll-view>
+  </l-tabpanel>
+  <l-tabpanel tab="接单" key="two" slot="two">
+    <scroll-view class="tab-content" scroll-y="true">
+      <view class="take-item" wx:for="{{orderTakingList}}" wx:key="id">
+        <view class="take-item-content">
+          <view class="take-item-title">{{item.title}}</view>
+          <view class="take-item-desc">{{item.content}}</view>
+          <view class="take-item-time">发布时间：{{item.publishTime}}</view>
+          <view class="take-item-time">送达时间：{{item.deadlineTime}}</view>
+        </view>
+        <view wx:if="{{item.type == 1}}" class="take-item-type-1">取</view>
+        <view wx:else class="take-item-type-2">买</view>
+        <view class="take-item-price">¥{{item.price}}.00</view>
+      </view>
+      <view style="height: 40rpx;"></view>
+    </scroll-view>
+  </l-tabpanel>
+  <l-tabpanel tab="排行榜" key="three" slot="three">
+    <scroll-view class="tab-content" scroll-y="true" style="background-color: #FFFFFF;">
+      <view class="rank-item" wx:for="{{rankingList}}" wx:key="mobile">
+        <image src="{{item.avatar}}"></image>
+        <view class="rank-item-content">
+          <view class="rank-item-name">{{item.name}}</view>
+          <view class="rank-item-total">¥{{item.total}}.00</view>
+        </view>
+      </view>
+    </scroll-view>
+  </l-tabpanel>
+</l-tabs>
