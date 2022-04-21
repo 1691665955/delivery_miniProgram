@@ -97,7 +97,8 @@
   border-radius: 10rpx;
 }
 
-.place-item-type-1, .place-item-type-2 {
+.place-item-type-1,
+.place-item-type-2 {
   margin-left: 20rpx;
   width: 80rpx;
   height: 80rpx;
@@ -108,11 +109,11 @@
   font-size: 40rpx;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-  background: linear-gradient(to left,#4797F8, #4467F5);
+  background: linear-gradient(to left, #4797F8, #4467F5);
 }
 
 .place-item-type-2 {
-  background: linear-gradient(to left,#F297F8, #F667F5);
+  background: linear-gradient(to left, #F297F8, #F667F5);
 }
 
 .place-item-content {
@@ -127,7 +128,7 @@
 }
 
 .place-item-status {
-  margin-top: 20rpx;
+  margin-top: 16rpx;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -184,7 +185,8 @@
   color: #8a8a8a;
 }
 
-.take-item-type-1, .take-item-type-2 {
+.take-item-type-1,
+.take-item-type-2 {
   position: absolute;
   top: 20rpx;
   right: 20rpx;
@@ -197,11 +199,11 @@
   font-size: 30rpx;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-  background: linear-gradient(to left,#4797F8, #4467F5);
+  background: linear-gradient(to left, #4797F8, #4467F5);
 }
 
 .take-item-type-2 {
-  background: linear-gradient(to left,#F297F8, #F667F5);
+  background: linear-gradient(to left, #F297F8, #F667F5);
 }
 
 .take-item-price {

@@ -1,2 +1,63 @@
 <!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<l-tabs l-class-header="swipeable-header" l-class-inactive="swipeable-class-inactive" l-class-line="line-class" l-class-active="swipeable-class-active" active-key="one" swipeable="{{false}}" has-line="{{true}}" animated-for-line="{{true}}" content-height="{{contentHeight}}">
+  <l-tabpanel tab="全部" key="one" slot="one">
+    <scroll-view class="tab-content" style="height:{{contentHeight}}rpx" scroll-y="true">
+      <block wx:for="{{orderList}}" wx:key="id">
+        <view class="take-item">
+          <view class="take-item-content">
+            <view class="take-item-title">{{item.title}}</view>
+            <view class="take-item-desc">{{item.content}}</view>
+            <view class="take-item-time">发布时间：{{item.publishTime}}</view>
+            <view class="take-item-time">要求时间：{{item.deadlineTime}}</view>
+            <view wx:if="{{item.status > 1}}" class="take-item-time">配送人员：{{item.deliveryInfo.name}} {{item.deliveryInfo.mobile}}</view>
+          </view>
+          <view wx:if="{{item.type == 1}}" class="take-item-type-1">取</view>
+          <view wx:else class="take-item-type-2">买</view>
+          <view class="take-item-price">¥{{item.price}}.00</view>
+          <image class="take-item-status" src="/images/status_{{item.status}}.png"></image>
+        </view>
+      </block>
+      <view style="height: 40rpx;"></view>
+    </scroll-view>
+  </l-tabpanel>
+  <l-tabpanel tab="已发布" key="two" slot="two">
+    <scroll-view class="tab-content" style="height:{{contentHeight}}rpx" scroll-y="true">
+      <block wx:for="{{orderList}}" wx:key="id">
+        <view class="take-item" wx:if="{{item.status == 1 || item.status == 2}}">
+          <view class="take-item-content">
+            <view class="take-item-title">{{item.title}}</view>
+            <view class="take-item-desc">{{item.content}}</view>
+            <view class="take-item-time">发布时间：{{item.publishTime}}</view>
+            <view class="take-item-time">要求时间：{{item.deadlineTime}}</view>
+            <view wx:if="{{item.status > 1}}" class="take-item-time">配送人员：{{item.deliveryInfo.name}} {{item.deliveryInfo.mobile}}</view>
+          </view>
+          <view wx:if="{{item.type == 1}}" class="take-item-type-1">取</view>
+          <view wx:else class="take-item-type-2">买</view>
+          <view class="take-item-price">¥{{item.price}}.00</view>
+          <image class="take-item-status" src="/images/status_{{item.status}}.png"></image>
+        </view>
+      </block>
+      <view style="height: 40rpx;"></view>
+    </scroll-view>
+  </l-tabpanel>
+  <l-tabpanel tab="已完成" key="three" slot="three">
+    <scroll-view class="tab-content" style="height:{{contentHeight}}rpx" scroll-y="true">
+      <block wx:for="{{orderList}}" wx:key="id">
+        <view class="take-item" wx:if="{{item.status == 3}}">
+          <view class="take-item-content">
+            <view class="take-item-title">{{item.title}}</view>
+            <view class="take-item-desc">{{item.content}}</view>
+            <view class="take-item-time">发布时间：{{item.publishTime}}</view>
+            <view class="take-item-time">要求时间：{{item.deadlineTime}}</view>
+            <view wx:if="{{item.status > 1}}" class="take-item-time">配送人员：{{item.deliveryInfo.name}} {{item.deliveryInfo.mobile}}</view>
+          </view>
+          <view wx:if="{{item.type == 1}}" class="take-item-type-1">取</view>
+          <view wx:else class="take-item-type-2">买</view>
+          <view class="take-item-price">¥{{item.price}}.00</view>
+          <image class="take-item-status" src="/images/status_{{item.status}}.png"></image>
+        </view>
+      </block>
+      <view style="height: 40rpx;"></view>
+    </scroll-view>
+  </l-tabpanel>
+</l-tabs>

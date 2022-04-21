@@ -12,13 +12,14 @@ Page({
       type: 1,
       title: "帮拿一个快递",
       content: "快递放在三期学生公寓教育超市内，谢谢，接单后联系我拿快递单号",
-      publishTime: "4-19 9:24",
-      deadlineTime: "4-19 11:24",
+      publishTime: "4-19 10:24",
+      deadlineTime: "4-19 12:24",
+      deliveryTime: "4-19 9:28",
       price: 4,
+      status: 2,
       deliveryInfo: {
         name: "李浩宇",
-        mobile: "17820338344",
-        deliveryTime: "4-19 9:28"
+        mobile: "17820338344"
       }
     },{
       id: 100000002,
@@ -28,6 +29,7 @@ Page({
       publishTime: "4-19 9:30",
       deadlineTime: "4-19 14:30",
       price: 38,
+      status: 1,
       deliveryInfo: null
     }],
     orderTakingList: [{
@@ -37,7 +39,9 @@ Page({
       content: "快递在学校西门保卫科，接单后联系我拿快递单号",
       publishTime: "4-19 9:24",
       deadlineTime: "4-19 11:24",
-      price: 5
+      price: 5,
+      status: 1,
+      deliveryInfo: null
     },{
       id: 100000004,
       type: 1,
@@ -45,7 +49,9 @@ Page({
       content: "快递在教育超市内，接单后联系我拿快递单号",
       publishTime: "4-19 9:25",
       deadlineTime: "4-19 11:25",
-      price: 3
+      price: 3,
+      status: 1,
+      deliveryInfo: null
     },{
       id: 100000005,
       type: 2,
@@ -53,7 +59,9 @@ Page({
       content: "买一床1.8m宽的棉被",
       publishTime: "4-19 9:30",
       deadlineTime: "4-19 14:30",
-      price: 58
+      price: 58,
+      status: 1,
+      deliveryInfo: null
     },{
       id: 100000006,
       type: 1,
@@ -61,7 +69,9 @@ Page({
       content: "快递在教育超市内，接单后联系我拿快递单号",
       publishTime: "4-19 9:25",
       deadlineTime: "4-19 11:25",
-      price: 3
+      price: 3,
+      status: 1,
+      deliveryInfo: null
     },{
       id: 100000007,
       type: 2,
@@ -69,7 +79,9 @@ Page({
       content: "帮忙买两袋30斤的大米，品牌：五常大米，再带一件罐装可口可乐",
       publishTime: "4-19 9:35",
       deadlineTime: "4-19 12:35",
-      price: 38
+      price: 38,
+      status: 1,
+      deliveryInfo: null
     }],
     rankingList: [{
       name: "李*宇",
@@ -119,7 +131,7 @@ Page({
     },{
       name: "吴*霞",
       mobile: "178****2822",
-      total: 2231,
+      total: 931,
       avatar: "/images/avatar_0.jpg"
     }]
   },

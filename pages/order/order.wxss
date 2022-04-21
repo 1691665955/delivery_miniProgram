@@ -1,1 +1,100 @@
 /* pages/order/order.wxss */
+
+.swipeable-header {
+  position: fixed;
+  top: 0;
+  width: 750rrpx !important;
+  border: 0rpx !important;
+}
+
+.swipeable-class-inactive {
+  border-width: 8rpx !important;
+}
+
+.swipeable-class-active {
+  font-weight: 900 !important;
+  font-size: 34rpx !important;
+  border-width: 6rpx !important;
+}
+
+.line-class {
+  width: 50rpx !important;
+}
+
+.tab-content {
+  position: fixed;
+  top: 80rpx;
+  background-color: #efefef;
+}
+
+.take-item {
+  position: relative;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  width: 670rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border-radius: 10rpx;
+}
+
+.take-item-content {
+  margin: 20rpx;
+  margin-right: 90rpx;
+}
+
+.take-item-title {
+  font-size: 28rpx;
+  color: #101010;
+}
+
+.take-item-desc {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #6c6c6c;
+  word-break: break-all;
+}
+
+.take-item-time {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #8a8a8a;
+}
+
+.take-item-type-1,
+.take-item-type-2 {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 6rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(to left, #4797F8, #4467F5);
+}
+
+.take-item-type-2 {
+  background: linear-gradient(to left, #F297F8, #F667F5);
+}
+
+.take-item-price {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  font-size: 48rpx;
+  color: #dd6130;
+}
+
+.take-item-status {
+  position: absolute;
+  right: 100rpx;
+  top: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  z-index: 99;
+}

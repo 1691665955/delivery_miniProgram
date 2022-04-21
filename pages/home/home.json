@@ -4,5 +4,6 @@
     "l-tabpanel": "/components/LinUI/tabpanel/index"
   },
   "navigationStyle": "custom",
-  "disableScroll": true
+  "disableScroll": true,
+  "disableSwipeBack": true
 }

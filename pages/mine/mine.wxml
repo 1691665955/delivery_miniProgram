@@ -1,2 +1,50 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="header">
+  <image src="/images/mine_avatar.jpg"></image>
+  <view>叶凡</view>
+</view>
+<view class="identity-bg">
+  <view class="identity-tip">
+    <image src="/images/VIP.png"></image>
+    <view>跑腿达人</view>
+  </view>
+  <view class="identity-btn">立即认证</view>
+</view>
+<view class="content-view">
+  <view class="content-view-header">
+    <view class="content-view-header-item">
+      <image src="/images/wallet.png"></image>
+      <view class="content-view-header-item-content">
+        <view class="content-view-header-item-content-top">¥223.00</view>
+        <view class="content-view-header-item-content-bottom">立即提现</view>
+      </view>
+    </view>
+    <view class="content-view-header-item">
+      <image src="/images/coupon.png"></image>
+      <view class="content-view-header-item-content">
+        <view class="content-view-header-item-content-top">0张</view>
+        <view class="content-view-header-item-content-bottom">优惠券</view>
+      </view>
+    </view>
+  </view>
+  <view class="content-view-item">
+    <image class="content-view-item-icon" src="/images/mine_0.png"></image>
+    <view>地址管理</view>
+    <image class="content-view-item-arrow" src="/images/mine_arrow.png"></image>
+  </view>
+  <view class="content-view-item">
+    <image class="content-view-item-icon" src="/images/mine_1.png"></image>
+    <view>我的提现</view>
+    <image class="content-view-item-arrow" src="/images/mine_arrow.png"></image>
+  </view>
+  <view class="content-view-item">
+    <image class="content-view-item-icon" src="/images/mine_2.png"></image>
+    <view>跑腿申请</view>
+    <image class="content-view-item-arrow" src="/images/mine_arrow.png"></image>
+  </view>
+  <view class="content-view-item">
+    <image class="content-view-item-icon" src="/images/mine_3.png"></image>
+    <view>在线客服</view>
+    <image class="content-view-item-arrow" src="/images/mine_arrow.png"></image>
+  </view>
+</view>
